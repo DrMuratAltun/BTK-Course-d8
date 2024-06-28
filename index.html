@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maaş Tahmin Eden Makine Öğrenmesi @drmurataltun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #007bff;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Maaş Tahmin Eden Makine Öğrenmesi @drmurataltun</h1>
+    <form action="/predict" method="post">
+        <label for="tecrube">Tecrübe:</label>
+        <input type="text" name="tecrube" id="tecrube" required>
+
+        <label for="yazili">Yazılı sınav notu:</label>
+        <input type="text" name="yazili" id="yazili" required>
+
+        <label for="mulakat">Mülakat notu:</label>
+        <input type="text" name="mulakat" id="mulakat" required>
+
+        <button type="submit">Tahmin Et</button>
+        <button type="reset">Reset</button>
+        {{tahmin}}
+
+    </form>
+</div>
+</body>
+</html>
